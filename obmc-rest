@@ -336,6 +336,7 @@ class SchemaHandler(RouteHandler):
             parser = IntrospectionNodeParser(
                 ElementTree.fromstring(data))
             for x, y in parser.get_interfaces().iteritems():
+		print "willen %s" (x)
                 schema[x] = y
 
         return schema
